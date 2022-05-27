@@ -130,6 +130,9 @@ Examples:
 */
 
 function extractKey(arr, key) {
+    return arr.map(function (val) {
+        return val[key];
+    })
 
 }
 
