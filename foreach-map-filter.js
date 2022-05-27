@@ -41,7 +41,13 @@ Examples:
 
 */
 function showFirstAndLast(arr) {
-
+    let newArray = [];
+    arr.forEach(function (val, index, array) {
+        let lastChar = val.length - 1
+        let newString = `${val[0]}${val[lastChar]}`
+        newArray.push(newString);
+    })
+    return newArray;
 }
 
 /*
