@@ -42,7 +42,7 @@ Examples:
 */
 function showFirstAndLast(arr) {
     let newArray = [];
-    arr.forEach(function (val, index, array) {
+    arr.forEach(function (val) {
         let lastChar = val.length - 1
         let newString = `${val[0]}${val[lastChar]}`
         newArray.push(newString);
@@ -60,7 +60,10 @@ Examples:
 
 */
 function addKeyAndValue(arr, key, value) {
-
+    arr.forEach(function (val) {
+        val[key] = value;
+    })
+    return arr;
 }
 
 /*
